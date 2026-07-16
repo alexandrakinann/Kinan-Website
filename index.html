@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A.S. Kinanti PWP | Jaksa &amp; Tokoh Progresif</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fed488",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f9f9f9",
+                    "outline": "#75777e",
+                    "tertiary": "#211400",
+                    "outline-variant": "#c5c6ce",
+                    "surface-container-high": "#e8e8e8",
+                    "surface": "#f9f9f9",
+                    "background": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#b6c7eb",
+                    "secondary-fixed": "#ffdea5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#261900",
+                    "primary": "#031632",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "surface-variant": "#e2e2e2",
+                    "on-background": "#1a1c1c",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#ad8d5b",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary-fixed-variant": "#374765",
+                    "surface-tint": "#4e5f7e",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-fixed-dim": "#e5c18a",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed-variant": "#5b4217",
+                    "surface-container-low": "#f3f3f4",
+                    "inverse-on-surface": "#f0f1f1",
+                    "tertiary-fixed": "#ffdead",
+                    "inverse-primary": "#b6c7eb",
+                    "surface-container-highest": "#e2e2e2",
+                    "tertiary-container": "#3c2700",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-tertiary-fixed": "#281900",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#1a2b48",
+                    "on-surface-variant": "#44474d",
+                    "secondary": "#775a19",
+                    "on-primary-fixed": "#081b38",
+                    "on-secondary-container": "#785a1a",
+                    "surface-container": "#eeeeee",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d7e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-padding": "80px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .legal-quote {
+            border-left: 4px solid #775a19;
+            padding-left: 24px;
+            font-style: italic;
+        }
+        .timeline-line {
+            width: 1px;
+            background-color: #031632;
+        }
+        .timeline-node {
+            width: 12px;
+            height: 12px;
+            border: 2px solid #775a19;
+            background-color: #f9f9f9;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .shadow-custom {
+            box-shadow: 0px 4px 20px rgba(26, 43, 72, 0.05);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant h-20 transition-all duration-200 ease-in-out">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">A.S. Kinanti PWP</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary transition-colors py-1" href="#hero">Beranda</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="#education">Pendidikan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="#awards">Penghargaan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1" href="#coding">Coding</a>
+</nav>
+<a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-lg font-label-caps hover:bg-primary-container transition-all" href="#contact">Contact</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="py-section-padding bg-surface-container-lowest overflow-hidden" id="hero">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="text-secondary font-label-caps tracking-widest uppercase block">Portfolio Profesional</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary leading-tight">Menegakkan Keadilan dengan Integritas</h1>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant">Jaksa &amp; Tokoh Progresif</p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Mendedikasikan diri dalam penegakan hukum yang transparan dan berkeadilan. Menyeimbangkan nilai-nilai hukum tradisional dengan pendekatan modern dan inovasi teknologi.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded font-label-caps uppercase tracking-wider hover:opacity-90 transition-all">Pelajari Lebih Lanjut</button>
+<button class="border border-secondary text-secondary px-8 py-4 rounded font-label-caps uppercase tracking-wider hover:bg-secondary-fixed-dim transition-all">Lihat Kiprah</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+<div class="relative z-10 aspect-[4/5] w-full rounded-lg overflow-hidden border border-outline-variant shadow-custom">
+<img class="w-full h-full object-cover" data-alt="A dignified and professional portrait of Alexandra Sukma Kinanti PWP, a female Indonesian prosecutor. She is wearing a formal dark navy legal uniform with golden insignias. The setting is a sophisticated modern office with mahogany bookshelves and soft morning light. The mood is authoritative yet accessible, reflecting a high-end minimalist corporate aesthetic with deep navy and gold tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9apAoani19AsUkajFrkWxdo1qEoLJQf9p-Ky4hWNoxYMa0X-qqsC_bWDyWwug960k8q6Nu4rlVPxy8eAjTegUTsBwdYUZ9M28cP50ygfSSRTFrCAG-cDxXCehSP_VIfnNmHjVy_YGXBmZNrlJuYPokC9QoWkp479gqyK0TdOopZ2l-W06x9D88UNlT2Q3qHxtuU5kF1Th5JcycVPsS3lnRSZ6rAu3OxcSOwsXboXLEZicNWBkbTinJQ"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary text-on-primary p-6 rounded-lg shadow-xl z-20">
+<span class="font-display-lg text-headline-md block">10+</span>
+<span class="font-label-caps opacity-80 uppercase">Tahun Pengabdian</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Timeline -->
+<section class="py-section-padding bg-surface" id="education">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Jejak Pendidikan</h2>
+<div class="w-16 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="relative max-w-3xl mx-auto pl-8">
+<div class="absolute left-[5.5px] top-0 bottom-0 timeline-line"></div>
+<div class="mb-16 relative">
+<div class="absolute -left-[30px] top-2 timeline-node"></div>
+<div class="bg-white p-8 rounded-lg border border-outline-variant shadow-custom">
+<span class="text-secondary font-label-caps mb-2 block">PENDIDIKAN MENENGAH ATAS</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">SMA Stella Duce 1 Yogyakarta</h3>
+<p class="text-on-surface-variant">Mengembangkan landasan disiplin dan integritas di salah satu institusi pendidikan terbaik di Yogyakarta.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-[30px] top-2 timeline-node"></div>
+<div class="bg-white p-8 rounded-lg border border-outline-variant shadow-custom">
+<span class="text-secondary font-label-caps mb-2 block">PENDIDIKAN DASAR &amp; MENENGAH</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">BHK Kota Wisata</h3>
+<p class="text-on-surface-variant">Memulai perjalanan akademik dengan fokus pada karakter dan kepemimpinan sejak dini di lingkungan SD dan SMP BHK.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Awards Section -->
+<section class="py-section-padding bg-primary-container text-on-primary" id="awards">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2">
+<span class="text-secondary-fixed font-label-caps uppercase mb-4 block">Penghargaan &amp; Rekognisi</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg mb-6 leading-tight text-white">Penghargaan Khusus sebagai Tokoh Progresif dalam Penegakan Hukum</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim opacity-90 mb-8">
+                            Apresiasi atas dedikasi luar biasa dalam mengimplementasikan nilai-nilai hukum modern dan reformasi birokrasi di lingkungan kejaksaan.
+                        </p>
+<div class="flex items-center gap-4 p-4 bg-white/5 rounded border border-white/10 italic font-family-playfair text-white/80">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="format_quote">format_quote</span>
+                             "Keadilan bukan hanya tentang menghukum, tapi tentang mengedukasi dan memperbaiki tatanan sosial."
+                        </div>
+</div>
+<div class="md:w-1/2 w-full">
+<div class="relative group cursor-pointer">
+<div class="absolute -inset-1 bg-gradient-to-r from-secondary-fixed to-primary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative bg-surface-container-lowest p-10 rounded-xl border border-secondary-fixed/30 shadow-2xl">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="military_tech">military_tech</span>
+<div class="bg-secondary-fixed/20 text-secondary-fixed-dim px-4 py-1 rounded-full text-xs font-label-caps uppercase">Eksklusif</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4 uppercase tracking-tighter">Tokoh Progresif 2024</h4>
+<p class="text-on-surface-variant mb-6">Diberikan oleh Dewan Hukum Nasional atas kontribusi nyata dalam digitalisasi proses litigasi dan integritas profesional.</p>
+<div class="h-px bg-outline-variant mb-6"></div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-xs">
+<span>JAKARTA, INDONESIA</span>
+<span>24 DESEMBER 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Coding Journey Slider -->
+<section class="py-section-padding bg-surface-container-low" id="coding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-secondary font-label-caps uppercase mb-2 block">Eksplorasi Teknologi</span>
+<h2 class="font-headline-md text-headline-md text-primary">Hasil Pembelajaran HTML &amp; CSS</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" onclick="scrollSlider(-1)">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-all" onclick="scrollSlider(1)">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto scrollbar-hide snap-x scroll-smooth pb-8" id="coding-slider">
+<!-- Project 1 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start">
+<div class="bg-white rounded-lg overflow-hidden border border-outline-variant shadow-custom group">
+<div class="h-56 bg-primary-container relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-fidelity mockup of a web browser displaying a clean, professional legal services website. The code on the screen shows well-structured HTML and CSS, with a palette of navy and white. The aesthetic is modern and corporate, consistent with high-end digital design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqe1IyM5E-xTfPFujbKhNQ3T532JyFeDQZFysg7yRY-RQQhMDf2YZRIl12-LhD4SCqrRbQStHokV9Q6Iugi3v-oxxd9M8piurIKxAqSda4DCFqD1BePBZEM0oSft4ULp-DEMeBWHsgknGRBwGVCDiok6D--46TmmQJ6irEq3iVsU2vuY75Cvusy6GsiCyouL5vVbQv05OEseEU2CauQbKzSzG_RUI_8lFESN8as8-IITMyTnrQ_07ngg"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-caps border border-white px-4 py-2 uppercase">Lihat Demo</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Web Portfolio Hukum</h4>
+<p class="text-on-surface-variant text-sm mb-4">Eksperimen layout menggunakan CSS Grid dan Flexbox untuk struktur informasi hukum yang kompleks.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-fixed/30 text-on-secondary-container px-2 py-1 rounded text-[10px] font-bold">HTML5</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-container px-2 py-1 rounded text-[10px] font-bold">CSS3</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start">
+<div class="bg-white rounded-lg overflow-hidden border border-outline-variant shadow-custom group">
+<div class="h-56 bg-primary-container relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro photograph of a computer screen showing elegant CSS code. In the background, a blurry reflection of a law library provides a sophisticated context. The lighting is low and focused on the glowing lines of code, emphasizing the blend of technology and law." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhr_0p5UzSqOJf1cPCWv2dfEulZf6LQQiPVXi5Mhyk2G52SPDjOyT6FEU1unGuaRFk0UyRSn0yzbCTp71llFOW24ZNTs5JAznut0mnOj7N9x3z1h-NYqwOjg3cPtYuoAbvpuyKGW6X1RRXzDGFkRH7v5WucfMmKXeO3eWUkqZON12a_eRwurm66Y20YosiTTP1r_IXrpgnSZWS8pQhiLE0bLY08Gn5wVnbUnXSKNu7Laz5Ew84TQMYSw"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-caps border border-white px-4 py-2 uppercase">Lihat Demo</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Dashboard Integritas</h4>
+<p class="text-on-surface-variant text-sm mb-4">Visualisasi data kasus menggunakan komponen UI modern untuk memantau performa hukum secara transparan.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-fixed/30 text-on-secondary-container px-2 py-1 rounded text-[10px] font-bold">Responsive</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-container px-2 py-1 rounded text-[10px] font-bold">Tailwind</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start">
+<div class="bg-white rounded-lg overflow-hidden border border-outline-variant shadow-custom group">
+<div class="h-56 bg-primary-container relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A modern, minimalist code editor interface showing a dark theme with vibrant syntax highlighting in blue and gold. The screen displays a professional website layout being built. The overall feel is tech-forward, precise, and high-quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBSQiPdGBh5rHU3WYhPDwlX9c-q2GJnlFVNocSst170R9-b5HoqT84IxhJ4QQF-lGHLoeDr7d-hZGBjoIkb06KRB62JZB734xy-GNSjNzi0I9tMf7EJANHiW__U1nZZwBOUcsbEfygrlbXZU8wztUN7GdMeruH96nDQeuUyhcXMndgg1NSrWGGM0oTrJnxkBHoWKdnJU2QNWk7v9Po2D3xBfriY6iWI-1cccAt93-eHVGFfLTODvnfrA"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-caps border border-white px-4 py-2 uppercase">Lihat Demo</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Micro-Interaction Lib</h4>
+<p class="text-on-surface-variant text-sm mb-4">Kumpulan animasi CSS halus untuk meningkatkan pengalaman pengguna pada aplikasi internal kejaksaan.</p>
+<div class="flex gap-2">
+<span class="bg-secondary-fixed/30 text-on-secondary-container px-2 py-1 rounded text-[10px] font-bold">Animations</span>
+<span class="bg-secondary-fixed/30 text-on-secondary-container px-2 py-1 rounded text-[10px] font-bold">UI/UX</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding bg-surface" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="bg-white rounded-xl border border-outline-variant shadow-custom overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/3 bg-primary text-on-primary p-12 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-6">Hubungi Saya</h3>
+<p class="opacity-80 mb-8">Untuk kolaborasi, konsultasi hukum, atau diskusi profesional lainnya.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="mail">mail</span>
+<span>contact@askinanti.id</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="location_on">location_on</span>
+<span>Jakarta, Indonesia</span>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<p class="font-label-caps mb-4 opacity-60">SOCIAL MEDIA</p>
+<a class="flex items-center gap-3 hover:text-secondary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+<span class="font-bold underline decoration-secondary">LinkedIn Profile</span>
+</a>
+</div>
+</div>
+<div class="md:w-2/3 p-12">
+<form class="space-y-6" onsubmit="return false">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary block">NAMA LENGKAP</label>
+<input class="w-full border-b border-outline-variant focus:border-primary py-3 outline-none transition-all placeholder:text-on-surface-variant/30" placeholder="Masukkan nama Anda" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary block">EMAIL</label>
+<input class="w-full border-b border-outline-variant focus:border-primary py-3 outline-none transition-all placeholder:text-on-surface-variant/30" placeholder="email@contoh.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary block">SUBJEK</label>
+<input class="w-full border-b border-outline-variant focus:border-primary py-3 outline-none transition-all placeholder:text-on-surface-variant/30" placeholder="Tujuan pesan" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-xs text-primary block">PESAN</label>
+<textarea class="w-full border-b border-outline-variant focus:border-primary py-3 outline-none transition-all resize-none placeholder:text-on-surface-variant/30" placeholder="Tuliskan pesan Anda di sini..." rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-12 py-4 rounded font-label-caps uppercase tracking-widest hover:bg-primary-container transition-all" type="submit">Kirim Pesan</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-primary dark:bg-primary-container">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="gavel">gavel</span>
+<span class="font-label-caps text-label-caps text-on-primary">ALEXANDRA SUKMA KINANTI PWP</span>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 max-w-sm">
+                    Berkomitmen pada transparansi hukum dan integritas sebagai pilar utama dalam mengabdi pada bangsa dan negara.
+                </p>
+</div>
+<div class="flex flex-col md:items-end justify-between gap-8">
+<div class="flex gap-8">
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed font-bold transition-all" href="#">Legal Notice</a>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed font-bold transition-all" href="#">Privacy Policy</a>
+<a class="text-on-primary-container opacity-80 hover:opacity-100 hover:text-secondary-fixed font-bold transition-all" href="#">Professional Conduct</a>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-60">
+                    © 2024 Alexandra Sukma Kinanti PWP. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        function scrollSlider(direction) {
+            const slider = document.getElementById('coding-slider');
+            const scrollAmount = 400;
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
